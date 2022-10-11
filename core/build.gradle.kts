@@ -9,14 +9,21 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    id("io.freefair.lombok") version "6.3.0"
 }
+
+group = "io.github.polarene.sawmill"
+version = "0.1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation("org.slf4j:slf4j-api:1.7.32")
+    implementation("org.projectlombok:lombok:1.18.22")
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
 tasks.test {

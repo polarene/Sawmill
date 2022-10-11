@@ -9,3 +9,4 @@
 
 rootProject.name = "Sawmill"
 include("core")
+include("logback")
